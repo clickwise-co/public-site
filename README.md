@@ -1,2 +1,3 @@
-# public-site
-Public site behind clickwise.co
+# clickwise.co
+
+Public site for clickwise.co
