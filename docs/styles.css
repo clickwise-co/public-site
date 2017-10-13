@@ -1,5 +1,69 @@
-h1 {
-  font-family: 'Work Sans', Helvetica, Arial, sans-serif; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Work Sans', Helvetica, Arial, sans-serif;
+  font-weight: 400; }
 
-p {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif; }
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  color: #2E2C3E; }
+
+a {
+  color: #DB6C4C;
+  text-decoration: none; }
+
+a.hover {
+  text-decoration: underline; }
+
+section .contents,
+header .contents,
+footer .contents {
+  max-width: 72rem;
+  margin: 0 auto; }
+  section .contents > h2, section .contents > h3,
+  header .contents > h2,
+  header .contents > h3,
+  footer .contents > h2,
+  footer .contents > h3 {
+    text-align: center; }
+
+header nav a {
+  color: #189EA2; }
+
+footer {
+  background-color: #2E2C3E;
+  color: #787A88; }
+  footer a {
+    color: #ffffff; }
+
+section.headline h2 {
+  color: #189EA2; }
+
+section.stats {
+  background-color: #DFE6F0; }
+  section.stats h2 {
+    color: #DB6C4C;
+    text-transform: uppercase; }
+  section.stats h3 {
+    color: #787A88; }
+  section.stats .percentage {
+    color: #189EA2; }
+  section.stats .description {
+    color: #787A88; }
+
+section.how-it-works ul.three-steps {
+  list-style: none;
+  width: 30%; }
+  section.how-it-works ul.three-steps li {
+    color: #ffffff;
+    text-align: center; }
+  section.how-it-works ul.three-steps li.analyse {
+    background-color: #7E9B99; }
+  section.how-it-works ul.three-steps li.strategy {
+    background-color: #62A09E; }
+  section.how-it-works ul.three-steps li.execution {
+    background-color: #189EA2; }
+
+section.how-it-works ul.summary h3 {
+  color: #189EA2; }
+
+section.service-details ul h3 {
+  color: #189EA2; }

@@ -1,10 +1,135 @@
+//1156/16 = 72rem
+
+$color-brand-darkblue: #2E2C3E;
+$color-brand-darkblue-30: #787A88;
+$color-brand-darkblue-10: #DFE6F0;
+
+$color-brand-darkorange: #DB6C4C;
+
+$color-brand-green: #189EA2;
+$color-brand-green-70: #62A09E;
+$color-brand-green-40: #7E9B99;
+
+$color-white: #ffffff;
 
 
-
-h1 {
-  font-family: 'Work Sans', Helvetica, Arial, sans-serif;
+@mixin heading-font {
+  font-family: 'Work Sans', Helvetica, Arial, sans-serif;  
 }
 
-p {
+@mixin body-font {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include heading-font;
+  font-weight: 400;
+}
+
+body {
+  @include body-font;
+  color: $color-brand-darkblue;
+}
+
+a {
+  color: $color-brand-darkorange;
+  text-decoration: none;
+}
+
+a.hover {
+  text-decoration: underline;
+}
+
+
+section .contents,
+header .contents,
+footer .contents {
+  max-width: 72rem;
+  margin: 0 auto;
+
+  & > h2, & > h3 {
+    text-align: center;
+  }
+}
+
+header {
+  nav a {
+    color: $color-brand-green;
+  }
+}
+
+footer {
+  background-color: $color-brand-darkblue;
+  color: $color-brand-darkblue-30;
+
+  a {
+    color: $color-white;
+  }
+}
+
+section.headline {
+  h2 {
+    color: $color-brand-green;
+  }
+}
+
+section.stats {
+  background-color: $color-brand-darkblue-10;
+
+  h2 {
+    color: $color-brand-darkorange;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    color: $color-brand-darkblue-30;
+  }
+
+  .percentage {
+    color: $color-brand-green;
+  }
+
+  .description {
+    color: $color-brand-darkblue-30;
+  }
+
+}
+
+section.how-it-works {
+
+  ul.three-steps {
+    list-style: none;
+    width: 30%;
+
+    li {
+      color: $color-white;
+      text-align: center;
+    }
+
+    li.analyse {
+      background-color: $color-brand-green-40;
+    }
+
+    li.strategy {
+      background-color: $color-brand-green-70;
+    }
+
+    li.execution {
+      background-color: $color-brand-green;
+    }
+  }
+
+  ul.summary {
+    h3 {
+      color: $color-brand-green;
+    }
+  }
+
+}
+
+section.service-details {
+
+  ul h3 {
+    color: $color-brand-green;
+  }
 }
