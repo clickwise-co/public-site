@@ -1,0 +1,87 @@
+// Backgrounder on vertical-rhythm https://zellwk.com/blog/why-vertical-rhythms/
+// 
+// tldr;
+// > The baseline is determined by the line-height property of the body text. Let’s say your body text
+// > has a computed line-height value of 24px. Your baseline is then 24px.
+// >
+// > Implementing Vertical Rhythm from this point on is simple. There are two rules:
+// >
+// > 1. Set the vertical white space between elements to a multiple of 24px.
+// > 2. Set the line-height of all text elements to a multiple of 24px.
+
+
+$baseline-font-size: 1rem;
+$baseline-line-height: 1.5 * $baseline-font-size;
+$baseline-grid-color: rgba(0, 170, 255, 0.3);
+
+// Values generated via http://www.modularscale.com/?1&em&1.333
+$perfectFourthFontSizes: (
+  -2: 0.563rem,
+  -1: 0.75rem,
+   0: 1rem,
+   1: 1.3125rem,
+   2: 1.75rem,
+   3: 2.375rem,
+   4: 3.1875rem,
+   5: 4.1875rem
+);
+
+@function fontSizeForScale ($scale) {
+  @return map-get($perfectFourthFontSizes, $scale);
+}
+
+@function lineCount ($font-size) {
+  @return ceil($font-size / $baseline-line-height);
+}
+
+@function baselineGridUnits ($multiplier) {
+  @return $multiplier * $baseline-line-height;
+}
+
+@mixin fitToBaselineGrid ($scale) {
+  $font-size: fontSizeForScale($scale);
+  font-size: $font-size;
+  @if ($scale == 1) {
+    line-height: 2;
+  } @else {
+    line-height: lineCount($font-size) * $baseline-line-height;    
+  }
+  margin: 0 0 $baseline-line-height 0;
+}
+
+body {
+  font-size: $baseline-font-size;
+  line-height: $baseline-line-height;  
+}
+
+// Need to display grid on header/footer/main as body & .content-container height is capped
+// at viewport height even when child content is larger.
+// html.show-baseline-grid .content-container {
+//   & > header, & > footer, & > main {
+//     position: relative;
+//   }
+
+//   & > header:after, & > footer:after, & > main:after {
+//     position: absolute;
+//     width: auto;
+//     height: auto;
+//     z-index: 9999;
+//     content: '';
+//     display: block;
+//     pointer-events: none;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+
+//     // hat tip to https://github.com/hiulit/Sassy-Gridlover for the css only grid
+//     background-image: linear-gradient($baseline-grid-color 1px, transparent 1px);
+//     background-position: left top;
+//     background-size: $baseline-line-height $baseline-line-height;
+//     box-shadow: 1px 0px 0px $baseline-grid-color, -1px 0px 0px $baseline-grid-color;
+//   }
+
+//   & > header:active:after, & > footer:active:after, & > main:active:after {
+//     display: none;
+//   }  
+// }

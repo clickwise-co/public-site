@@ -1,48 +1,10 @@
 @import 'normalize/import-now';
+@import '_colors';
 @import '_utils';
+@import '_vertical-rhythm';
+@import '_typography';
 
 //max-width 1156/16 = 72rem
-
-$color-brand-darkblue: #2E2C3E;
-$color-brand-darkblue-30: #787A88;
-$color-brand-darkblue-10: #DFE6F0;
-
-$color-brand-darkorange: #DB6C4C;
-
-$color-brand-green: #189EA2;
-$color-brand-green-70: #62A09E;
-$color-brand-green-40: #7E9B99;
-
-$color-white: #ffffff;
-
-
-@mixin heading-font {
-  font-family: 'Work Sans', Helvetica, Arial, sans-serif;  
-}
-
-@mixin body-font {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  @include heading-font;
-  font-weight: 400;
-}
-
-body {
-  @include body-font;
-  color: $color-brand-darkblue;
-}
-
-a {
-  color: $color-brand-darkorange;
-  text-decoration: none;
-}
-
-a.hover {
-  text-decoration: underline;
-}
-
 
 section .contents,
 header .contents,
@@ -69,6 +31,8 @@ header {
 footer {
   background-color: $color-brand-darkblue;
   color: $color-brand-darkblue-30;
+  padding-top: baselineGridUnits(1);
+  padding-bottom: baselineGridUnits(1);
 
   nav ul {
     @include remove-bullets;    
@@ -80,6 +44,9 @@ footer {
 }
 
 section.headline {
+  padding-top: baselineGridUnits(2);
+  padding-bottom: baselineGridUnits(2);
+
   ul {
     @include remove-bullets;    
   }
@@ -91,7 +58,9 @@ section.headline {
 
 section.stats {
   background-color: $color-brand-darkblue-10;
-
+  padding-top: baselineGridUnits(1);
+  padding-bottom: baselineGridUnits(1);
+  
   h2 {
     color: $color-brand-darkorange;
     text-transform: uppercase;
@@ -116,6 +85,8 @@ section.stats {
 }
 
 section.how-it-works {
+  padding-top: baselineGridUnits(2);
+  padding-bottom: baselineGridUnits(2);
 
   ul.three-steps {
     @include remove-bullets;
@@ -125,6 +96,11 @@ section.how-it-works {
     li {
       color: $color-white;
       text-align: center;
+      @include box-sizing-padding-fix;
+      
+      h3 {
+        text-transform: uppercase;
+      }
     }
 
     li.analyse {
@@ -151,6 +127,8 @@ section.how-it-works {
 }
 
 section.service-details {
+  padding-top: baselineGridUnits(2);
+  padding-bottom: baselineGridUnits(2);
 
   ul {
     @include remove-bullets;

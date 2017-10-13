@@ -1,0 +1,78 @@
+@mixin heading-font {
+  font-family: 'Work Sans', Helvetica, Arial, sans-serif;  
+}
+
+@mixin body-font {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+html {
+  line-height: $baseline-line-height;
+}
+
+body {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  font-kerning: normal;
+  hyphens: manual;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+
+  @include body-font;
+  color: $color-brand-darkblue;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include heading-font;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+// TODO: sort max-wdith on these based on rem
+h1 {
+  @include fitToBaselineGrid(3);
+}
+
+h2 {
+  @include fitToBaselineGrid(2);
+}
+
+h3 {
+  @include fitToBaselineGrid(1);
+}
+
+h4 {
+  @include fitToBaselineGrid(0);
+}
+
+p
+{
+  @include fitToBaselineGrid(0);
+}
+
+ul li,
+ol li
+{
+  @include fitToBaselineGrid(0);
+}
+
+small {
+  @include fitToBaselineGrid(-1);
+  line-height: 1.25rem; //TODO: why is this .25rem less than line-height of the p tag?
+}
+
+ul, ol {
+  padding-left: 1.5rem; //TODO feels like this should be related to line-height
+  margin: 0;
+}
+
+a {
+  color: $color-brand-darkorange;
+  text-decoration: none;
+}
+
+a.hover {
+  text-decoration: underline;
+}
