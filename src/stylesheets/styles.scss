@@ -1,4 +1,7 @@
-//1156/16 = 72rem
+@import 'normalize/import-now';
+@import '_utils';
+
+//max-width 1156/16 = 72rem
 
 $color-brand-darkblue: #2E2C3E;
 $color-brand-darkblue-30: #787A88;
@@ -53,6 +56,11 @@ footer .contents {
 }
 
 header {
+
+  nav ul {
+    @include remove-bullets;    
+  }
+
   nav a {
     color: $color-brand-green;
   }
@@ -62,12 +70,20 @@ footer {
   background-color: $color-brand-darkblue;
   color: $color-brand-darkblue-30;
 
-  a {
+  nav ul {
+    @include remove-bullets;    
+  }
+
+  nav a {
     color: $color-white;
   }
 }
 
 section.headline {
+  ul {
+    @include remove-bullets;    
+  }
+
   h2 {
     color: $color-brand-green;
   }
@@ -85,6 +101,10 @@ section.stats {
     color: $color-brand-darkblue-30;
   }
 
+  ul {
+    @include remove-bullets;    
+  }
+
   .percentage {
     color: $color-brand-green;
   }
@@ -98,7 +118,8 @@ section.stats {
 section.how-it-works {
 
   ul.three-steps {
-    list-style: none;
+    @include remove-bullets;
+
     width: 30%;
 
     li {
@@ -120,6 +141,8 @@ section.how-it-works {
   }
 
   ul.summary {
+    @include remove-bullets;
+    
     h3 {
       color: $color-brand-green;
     }
@@ -129,7 +152,11 @@ section.how-it-works {
 
 section.service-details {
 
-  ul h3 {
+  ul {
+    @include remove-bullets;
+
+    h3 {
     color: $color-brand-green;
+    }
   }
 }

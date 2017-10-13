@@ -4,7 +4,7 @@
   "description": "Public site for clickwise.co",
   "main": "index.js",
   "scripts": {
-    "build:css": "node-sass ./src/stylesheets/styles.scss  docs/styles.css",
+    "build:css": "node-sass --include-path node_modules/normalize-scss/sass ./src/stylesheets/styles.scss docs/styles.css",
     "start": "browser-sync start --extensions html --server ./docs --files ./docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/clickwise-co/public-site#readme",
   "devDependencies": {
     "browser-sync": "^2.18.13",
-    "node-sass": "^4.5.3"
+    "node-sass": "^4.5.3",
+    "normalize-scss": "^7.0.0"
   }
 }
