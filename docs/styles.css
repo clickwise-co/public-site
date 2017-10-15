@@ -599,6 +599,15 @@ footer {
   footer nav a {
     color: #ffffff; }
 
+section.hero {
+  background-image: url(images/hero-background-medium.jpg);
+  height: 34.5rem; }
+  section.hero h1 {
+    padding-top: 13.5rem;
+    color: #ffffff;
+    width: calc(50% - 1.5rem);
+    margin-left: calc(8.33333% - 1.5rem); }
+
 section.headline {
   padding-top: 3rem;
   padding-bottom: 3rem; }

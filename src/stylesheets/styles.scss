@@ -61,6 +61,18 @@ footer {
   }
 }
 
+section.hero {
+  background-image: url(images/hero-background-medium.jpg);
+  height: baselineGridUnits(23);
+
+  h1 {
+    padding-top: baselineGridUnits(9);
+    color: $color-white;
+    width: grid-width(6);
+    @include grid-offset(1, 0);    
+  }
+}
+
 section.headline {
   padding-top: baselineGridUnits(2);
   padding-bottom: baselineGridUnits(2);
