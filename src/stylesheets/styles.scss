@@ -65,7 +65,13 @@ footer {
     @include grid;
 
     li {
-      text-align: right;
+      text-align: center;
+    }
+
+    @include small-screen-up {            
+      li {
+        text-align: right;
+      }
     }
   }
 
