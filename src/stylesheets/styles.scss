@@ -105,12 +105,21 @@ section.headline {
     @include remove-bullets;
     @include grid;
 
-    li:first-child {
-      @include grid-offset(2,0);
+    li {
+      margin-bottom: 0;
     }
 
-    li:last-child {
-      @include grid-offset(0,2);
+    @include small-screen-up {      
+      li {
+        margin-bottom: baselineGridUnits(1);
+      }
+      li:first-child {
+        @include grid-offset(2,0);
+      }
+
+      li:last-child {
+        @include grid-offset(0,2);
+      }
     }
   }
 

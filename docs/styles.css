@@ -649,10 +649,15 @@ section.headline {
         margin-left: 0; }
       section.headline ul > *:last-child {
         margin-right: 0; } }
-    section.headline ul li:first-child {
-      margin-left: calc(16.66667% - 1.5rem); }
-    section.headline ul li:last-child {
-      margin-right: calc(16.66667% - 1.5rem); }
+    section.headline ul li {
+      margin-bottom: 0; }
+    @media screen and (min-width: 48rem) {
+      section.headline ul li {
+        margin-bottom: 1.5rem; }
+      section.headline ul li:first-child {
+        margin-left: calc(16.66667% - 1.5rem); }
+      section.headline ul li:last-child {
+        margin-right: calc(16.66667% - 1.5rem); } }
   section.headline h2 {
     color: #189EA2; }
 
