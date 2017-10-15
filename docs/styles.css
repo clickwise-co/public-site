@@ -509,9 +509,46 @@ footer .contents {
   footer .contents > h3 {
     text-align: center; }
 
+header .contents {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between; }
+  @media screen and (min-width: 48rem) {
+    header .contents {
+      flex-flow: row wrap; } }
+  header .contents > * {
+    flex: 4 1 0; }
+  @media screen and (min-width: 48rem) {
+    header .contents > * {
+      margin-left: 0.75rem;
+      margin-right: 0.75rem; }
+    header .contents > *:first-child {
+      margin-left: 0; }
+    header .contents > *:last-child {
+      margin-right: 0; } }
+
 header nav ul {
   list-style: none;
-  padding-left: 0; }
+  padding-left: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  margin-top: 1.5rem; }
+  @media screen and (min-width: 48rem) {
+    header nav ul {
+      flex-flow: row wrap; } }
+  header nav ul > * {
+    flex: 4 1 0; }
+  @media screen and (min-width: 48rem) {
+    header nav ul > * {
+      margin-left: 0.75rem;
+      margin-right: 0.75rem; }
+    header nav ul > *:first-child {
+      margin-left: 0; }
+    header nav ul > *:last-child {
+      margin-right: 0; } }
+  header nav ul li {
+    text-align: right; }
 
 header nav a {
   color: #189EA2; }
@@ -520,10 +557,45 @@ footer {
   background-color: #2E2C3E;
   color: #787A88;
   padding-top: 1.5rem;
-  padding-bottom: 1.5rem; }
+  padding-bottom: 0.1px; }
+  footer .menu-and-copyright {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between; }
+    @media screen and (min-width: 48rem) {
+      footer .menu-and-copyright {
+        flex-flow: row wrap; } }
+    footer .menu-and-copyright > * {
+      flex: 4 1 0; }
+    @media screen and (min-width: 48rem) {
+      footer .menu-and-copyright > * {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem; }
+      footer .menu-and-copyright > *:first-child {
+        margin-left: 0; }
+      footer .menu-and-copyright > *:last-child {
+        margin-right: 0; } }
   footer nav ul {
     list-style: none;
-    padding-left: 0; }
+    padding-left: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between; }
+    @media screen and (min-width: 48rem) {
+      footer nav ul {
+        flex-flow: row wrap; } }
+    footer nav ul > * {
+      flex: 4 1 0; }
+    @media screen and (min-width: 48rem) {
+      footer nav ul > * {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem; }
+      footer nav ul > *:first-child {
+        margin-left: 0; }
+      footer nav ul > *:last-child {
+        margin-right: 0; } }
+    footer nav ul li {
+      text-align: right; }
   footer nav a {
     color: #ffffff; }
 

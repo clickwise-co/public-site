@@ -19,9 +19,18 @@ footer .contents {
 }
 
 header {
+  .contents {
+    @include grid;
+  }
 
   nav ul {
-    @include remove-bullets;    
+    @include remove-bullets;
+    @include grid;
+    margin-top: baselineGridUnits(1);
+
+    li {
+      text-align: right;
+    }
   }
 
   nav a {
@@ -33,10 +42,18 @@ footer {
   background-color: $color-brand-darkblue;
   color: $color-brand-darkblue-30;
   padding-top: baselineGridUnits(1);
-  padding-bottom: baselineGridUnits(1);
+  @include box-sizing-padding-fix;
 
+  .menu-and-copyright {
+    @include grid;
+  }
   nav ul {
     @include remove-bullets;    
+    @include grid;
+
+    li {
+      text-align: right;
+    }
   }
 
   nav a {
