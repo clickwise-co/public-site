@@ -812,9 +812,11 @@ section.service-details {
   padding-bottom: 1.5rem; }
   section.service-details ul {
     list-style: none;
-    padding-left: 0;
-    margin-left: calc(16.66667% - 1.5rem);
-    margin-right: calc(16.66667% - 1.5rem); }
+    padding-left: 0; }
+    @media screen and (min-width: 48rem) {
+      section.service-details ul {
+        margin-left: calc(16.66667% - 1.5rem);
+        margin-right: calc(16.66667% - 1.5rem); } }
     section.service-details ul li {
       display: flex;
       flex-flow: column nowrap;

@@ -286,8 +286,11 @@ section.service-details {
 
   ul {
     @include remove-bullets;
-    @include grid-offset(2, 2);
-    
+
+    @include small-screen-up {      
+      @include grid-offset(2, 2);
+    }
+
     li {
       @include grid;
     }
