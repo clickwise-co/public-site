@@ -501,7 +501,13 @@ section .contents,
 header .contents,
 footer .contents {
   max-width: 72rem;
-  margin: 0 auto; }
+  margin-left: 1.5rem;
+  margin-right: 1.5rem; }
+  @media screen and (min-width: 48rem) {
+    section .contents,
+    header .contents,
+    footer .contents {
+      margin: 0 auto; } }
   section .contents > h2, section .contents > h3,
   header .contents > h2,
   header .contents > h3,
@@ -550,7 +556,10 @@ header {
       header nav ul > *:last-child {
         margin-right: 0; } }
     header nav ul li {
-      text-align: right; }
+      text-align: center; }
+    @media screen and (min-width: 48rem) {
+      header nav ul li {
+        text-align: right; } }
   header nav a {
     color: #189EA2; }
 

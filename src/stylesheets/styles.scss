@@ -5,13 +5,17 @@
 @import '_grid';
 @import '_typography';
 
-//max-width 1156/16 = 72rem
-
 section .contents,
 header .contents,
 footer .contents {
-  max-width: 72rem;
-  margin: 0 auto;
+  max-width: $large-screen-breakpoint;
+
+  margin-left: $grid-gutter-width;
+  margin-right: $grid-gutter-width;
+  
+  @include small-screen-up {
+    margin: 0 auto;
+  }  
 
   & > h2, & > h3 {
     text-align: center;
@@ -32,7 +36,13 @@ header {
     margin-top: baselineGridUnits(1);
 
     li {
-      text-align: right;
+      text-align: center;
+    }
+
+    @include small-screen-up {
+      li {
+        text-align: right;
+      }        
     }
   }
 
