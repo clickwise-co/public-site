@@ -104,7 +104,9 @@ section.headline {
   padding-bottom: baselineGridUnits(2);
 
   h2 {
-    @include grid-offset(2, 2);
+    @include small-screen-up {    
+      @include grid-offset(2, 2);
+    }
   }
 
   ul {

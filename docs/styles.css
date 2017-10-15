@@ -630,9 +630,10 @@ section.hero {
 section.headline {
   padding-top: 3rem;
   padding-bottom: 3rem; }
-  section.headline h2 {
-    margin-left: calc(16.66667% - 1.5rem);
-    margin-right: calc(16.66667% - 1.5rem); }
+  @media screen and (min-width: 48rem) {
+    section.headline h2 {
+      margin-left: calc(16.66667% - 1.5rem);
+      margin-right: calc(16.66667% - 1.5rem); } }
   section.headline ul {
     list-style: none;
     padding-left: 0;
