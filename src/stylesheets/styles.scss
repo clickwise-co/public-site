@@ -2,6 +2,7 @@
 @import '_colors';
 @import '_utils';
 @import '_vertical-rhythm';
+@import '_grid';
 @import '_typography';
 
 //max-width 1156/16 = 72rem
@@ -47,8 +48,21 @@ section.headline {
   padding-top: baselineGridUnits(2);
   padding-bottom: baselineGridUnits(2);
 
+  h2 {
+    @include grid-offset(2, 2);
+  }
+
   ul {
-    @include remove-bullets;    
+    @include remove-bullets;
+    @include grid;
+
+    li:first-child {
+      @include grid-offset(2,0);
+    }
+
+    li:last-child {
+      @include grid-offset(0,2);
+    }
   }
 
   h2 {
@@ -72,6 +86,20 @@ section.stats {
 
   ul {
     @include remove-bullets;    
+    @include grid;    
+
+    li {
+      text-align: center;
+    }
+
+    li:first-child {
+      @include grid-offset(2,0);
+    }
+
+    li:last-child {
+      @include grid-offset(0,2);
+    }
+
   }
 
   .percentage {
@@ -90,9 +118,10 @@ section.how-it-works {
 
   ul.three-steps {
     @include remove-bullets;
+    @include grid;    
 
-    width: 30%;
-
+    @include grid-offset(1, 1);
+    
     li {
       color: $color-white;
       text-align: center;
@@ -118,7 +147,25 @@ section.how-it-works {
 
   ul.summary {
     @include remove-bullets;
+    @include grid;          
+    @include grid-offset(2, 2);
     
+    li {
+      flex: 0 1 grid-width(6); //TODO: doesn't work for nested grid units...
+    }
+
+    li:nth-child(odd) {
+      margin-left: 0;
+    }
+
+    li:nth-child(even) {
+      margin-left: 0;
+    }
+
+    li:last-child {
+      margin-right: $grid-gutter-width / 2;
+    }
+
     h3 {
       color: $color-brand-green;
     }
@@ -132,9 +179,20 @@ section.service-details {
 
   ul {
     @include remove-bullets;
+    @include grid-offset(2, 2);
+    
+    li {
+      @include grid;
+    }
 
     h3 {
-    color: $color-brand-green;
+      color: $color-brand-green;
     }
+  }
+
+  .cta {
+    text-align: center;
+    @include grid-offset(2, 2);
+    @include fitToBaselineGrid(1);
   }
 }

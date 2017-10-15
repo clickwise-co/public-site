@@ -406,6 +406,29 @@ body {
   font-size: 1rem;
   line-height: 1.5rem; }
 
+html.show-baseline-grid .content-container > header, html.show-baseline-grid .content-container > footer, html.show-baseline-grid .content-container > main {
+  position: relative; }
+
+html.show-baseline-grid .content-container > header:after, html.show-baseline-grid .content-container > footer:after, html.show-baseline-grid .content-container > main:after {
+  position: absolute;
+  width: auto;
+  height: auto;
+  z-index: 9999;
+  content: '';
+  display: block;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(rgba(0, 170, 255, 0.3) 1px, transparent 1px);
+  background-position: left top;
+  background-size: 1.5rem 1.5rem;
+  box-shadow: 1px 0px 0px rgba(0, 170, 255, 0.3), -1px 0px 0px rgba(0, 170, 255, 0.3); }
+
+html.show-baseline-grid .content-container > header:active:after, html.show-baseline-grid .content-container > footer:active:after, html.show-baseline-grid .content-container > main:active:after {
+  display: none; }
+
 html {
   line-height: 1.5rem; }
 
@@ -507,9 +530,32 @@ footer {
 section.headline {
   padding-top: 3rem;
   padding-bottom: 3rem; }
+  section.headline h2 {
+    margin-left: calc(16.66667% - 1.5rem);
+    margin-right: calc(16.66667% - 1.5rem); }
   section.headline ul {
     list-style: none;
-    padding-left: 0; }
+    padding-left: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between; }
+    @media screen and (min-width: 48rem) {
+      section.headline ul {
+        flex-flow: row wrap; } }
+    section.headline ul > * {
+      flex: 4 1 0; }
+    @media screen and (min-width: 48rem) {
+      section.headline ul > * {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem; }
+      section.headline ul > *:first-child {
+        margin-left: 0; }
+      section.headline ul > *:last-child {
+        margin-right: 0; } }
+    section.headline ul li:first-child {
+      margin-left: calc(16.66667% - 1.5rem); }
+    section.headline ul li:last-child {
+      margin-right: calc(16.66667% - 1.5rem); }
   section.headline h2 {
     color: #189EA2; }
 
@@ -524,7 +570,29 @@ section.stats {
     color: #787A88; }
   section.stats ul {
     list-style: none;
-    padding-left: 0; }
+    padding-left: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between; }
+    @media screen and (min-width: 48rem) {
+      section.stats ul {
+        flex-flow: row wrap; } }
+    section.stats ul > * {
+      flex: 4 1 0; }
+    @media screen and (min-width: 48rem) {
+      section.stats ul > * {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem; }
+      section.stats ul > *:first-child {
+        margin-left: 0; }
+      section.stats ul > *:last-child {
+        margin-right: 0; } }
+    section.stats ul li {
+      text-align: center; }
+    section.stats ul li:first-child {
+      margin-left: calc(16.66667% - 1.5rem); }
+    section.stats ul li:last-child {
+      margin-right: calc(16.66667% - 1.5rem); }
   section.stats .percentage {
     color: #189EA2; }
   section.stats .description {
@@ -536,7 +604,24 @@ section.how-it-works {
   section.how-it-works ul.three-steps {
     list-style: none;
     padding-left: 0;
-    width: 30%; }
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin-left: calc(8.33333% - 1.5rem);
+    margin-right: calc(8.33333% - 1.5rem); }
+    @media screen and (min-width: 48rem) {
+      section.how-it-works ul.three-steps {
+        flex-flow: row wrap; } }
+    section.how-it-works ul.three-steps > * {
+      flex: 4 1 0; }
+    @media screen and (min-width: 48rem) {
+      section.how-it-works ul.three-steps > * {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem; }
+      section.how-it-works ul.three-steps > *:first-child {
+        margin-left: 0; }
+      section.how-it-works ul.three-steps > *:last-child {
+        margin-right: 0; } }
     section.how-it-works ul.three-steps li {
       color: #ffffff;
       text-align: center;
@@ -551,7 +636,33 @@ section.how-it-works {
       background-color: #189EA2; }
   section.how-it-works ul.summary {
     list-style: none;
-    padding-left: 0; }
+    padding-left: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin-left: calc(16.66667% - 1.5rem);
+    margin-right: calc(16.66667% - 1.5rem); }
+    @media screen and (min-width: 48rem) {
+      section.how-it-works ul.summary {
+        flex-flow: row wrap; } }
+    section.how-it-works ul.summary > * {
+      flex: 4 1 0; }
+    @media screen and (min-width: 48rem) {
+      section.how-it-works ul.summary > * {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem; }
+      section.how-it-works ul.summary > *:first-child {
+        margin-left: 0; }
+      section.how-it-works ul.summary > *:last-child {
+        margin-right: 0; } }
+    section.how-it-works ul.summary li {
+      flex: 0 1 calc(50% - 1.5rem); }
+    section.how-it-works ul.summary li:nth-child(odd) {
+      margin-left: 0; }
+    section.how-it-works ul.summary li:nth-child(even) {
+      margin-left: 0; }
+    section.how-it-works ul.summary li:last-child {
+      margin-right: 0.75rem; }
     section.how-it-works ul.summary h3 {
       color: #189EA2; }
 
@@ -560,6 +671,32 @@ section.service-details {
   padding-bottom: 3rem; }
   section.service-details ul {
     list-style: none;
-    padding-left: 0; }
+    padding-left: 0;
+    margin-left: calc(16.66667% - 1.5rem);
+    margin-right: calc(16.66667% - 1.5rem); }
+    section.service-details ul li {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between; }
+      @media screen and (min-width: 48rem) {
+        section.service-details ul li {
+          flex-flow: row wrap; } }
+      section.service-details ul li > * {
+        flex: 4 1 0; }
+      @media screen and (min-width: 48rem) {
+        section.service-details ul li > * {
+          margin-left: 0.75rem;
+          margin-right: 0.75rem; }
+        section.service-details ul li > *:first-child {
+          margin-left: 0; }
+        section.service-details ul li > *:last-child {
+          margin-right: 0; } }
     section.service-details ul h3 {
       color: #189EA2; }
+  section.service-details .cta {
+    text-align: center;
+    margin-left: calc(16.66667% - 1.5rem);
+    margin-right: calc(16.66667% - 1.5rem);
+    font-size: 1.3125rem;
+    line-height: 2;
+    margin: 0 0 1.5rem 0; }

@@ -1,0 +1,82 @@
+$small-screen-breakpoint: 48rem;
+$large-screen-breakpoint: 72rem;
+$gutter-width: baselineGridUnits(1);
+$grid-gutter-width: baselineGridUnits(1);
+$grid-columns: 12;
+$grid-col-gutter-ratio: 3;
+
+$grid-gutter-width-percentage: 100% / (($grid-columns - 1) + ($grid-columns * $grid-col-gutter-ratio));
+$grid-col-width: $grid-col-gutter-ratio * $grid-gutter-width-percentage;
+
+
+@mixin small-screen-up {
+  @media screen and (min-width: $small-screen-breakpoint) {
+    @content;
+  }
+}
+
+@mixin large-screen-up {
+  @media screen and (min-width: $large-screen-breakpoint) {
+    @content;
+  }
+}
+
+@mixin screen-larger-than($min-width: $small-screen-breakpoint) {
+  @media screen and (min-width: $min-width) {
+    @content;
+  }  
+}
+
+@mixin grid-weight ($flex-grow: 4) {
+  flex: $flex-grow 1 0; //default flex-basis: 0 for IE10
+}
+
+@function grid-width ($cols: 1) {
+  $exp: '#{($cols/$grid-columns) * 100%} - #{$grid-gutter-width}';
+  @return calc(#{$exp});
+  // @return ($cols * $grid-col-width) + (($cols - 1) * $grid-gutter-width-percentage);
+}
+
+@mixin grid-offset ($left: 0, $right: 0) {
+  @if ($left > 0) {
+    margin-left: grid-width($left);
+  }
+  @if ($right > 0) {
+    margin-right: grid-width($right);
+  }
+}
+
+//REVIEW: this can be extended to cater for grids with no gutter, just add parameter to make 
+// gutter conditional — default to true so that you explicitly have to disable margins.
+// ```
+// @mixin grid ($withGutter: true) {
+// ```
+@mixin grid {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between; 
+
+  @include small-screen-up {
+    flex-flow: row wrap;
+  }
+
+  & > * {
+    @include grid-weight(4);
+  }
+
+  @include small-screen-up {
+
+    & > * {
+      margin-left: $gutter-width/2;
+      margin-right: $gutter-width/2;
+    }
+
+    & > *:first-child {
+      margin-left: 0;    
+    }
+
+    & > *:last-child {
+      margin-right: 0;    
+    }  
+  }
+}

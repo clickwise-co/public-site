@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="224px" height="67px" viewBox="0 0 224 67" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo" transform="translate(0.000000, -5.000000)">
+            <text id="clickwise" font-family="WorkSans-Regular, Work Sans" font-size="36" font-weight="normal" fill="#189EA2">
+                <tspan x="64.054" y="54">clickwise</tspan>
+            </text>
+            <g id="Group-4-Copy-4" stroke="#2F2B3F">
+                <g id="Group-3" transform="translate(37.248904, 36.131265) rotate(12.000000) translate(-37.248904, -36.131265) translate(5.568904, 6.371265)">
+                    <ellipse id="Oval-3-Copy-2" stroke-width="2.5" cx="30.5091542" cy="5.07956099" rx="4.82992169" ry="4.84849831"></ellipse>
+                    <path d="M30.8688779,14.6378455 L30.8688779,20.887237" id="Line-7" stroke-width="2.5" stroke-linecap="round"></path>
+                    <path d="M53.264675,51.8230856 L47.1445144,47.4361649" id="Line-7-Copy" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M9.44222708,51.2913511 L15.715348,47.1278451" id="Line-7-Copy-2" stroke-width="1.5" stroke-linecap="round"></path>
+                    <ellipse id="Oval-3-Copy-3" stroke-width="2" cx="59.1945963" cy="55.5804006" rx="3.8745098" ry="3.88941176"></ellipse>
+                    <ellipse id="Oval-3-Copy-4" stroke-width="1.5" cx="3.8745098" cy="55.1505882" rx="3.8745098" ry="3.88941176"></ellipse>
+                </g>
+                <g id="the-c" transform="translate(19.680000, 29.760000)" stroke-width="2.5">
+                    <circle id="Oval-3" cx="15.36" cy="15.36" r="14.9504"></circle>
+                    <path d="M15.36,26.2144 C21.3547196,26.2144 26.2144,21.3547196 26.2144,15.36 C26.2144,9.36528041 21.3547196,4.5056 15.36,4.5056 C9.36528041,4.5056 4.5056,9.36528041 4.5056,15.36" id="Oval-3-Copy" transform="translate(15.360000, 15.360000) rotate(-135.000000) translate(-15.360000, -15.360000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

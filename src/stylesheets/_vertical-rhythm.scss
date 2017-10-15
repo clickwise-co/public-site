@@ -56,32 +56,32 @@ body {
 
 // Need to display grid on header/footer/main as body & .content-container height is capped
 // at viewport height even when child content is larger.
-// html.show-baseline-grid .content-container {
-//   & > header, & > footer, & > main {
-//     position: relative;
-//   }
+html.show-baseline-grid .content-container {
+  & > header, & > footer, & > main {
+    position: relative;
+  }
 
-//   & > header:after, & > footer:after, & > main:after {
-//     position: absolute;
-//     width: auto;
-//     height: auto;
-//     z-index: 9999;
-//     content: '';
-//     display: block;
-//     pointer-events: none;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
+  & > header:after, & > footer:after, & > main:after {
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: 9999;
+    content: '';
+    display: block;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
-//     // hat tip to https://github.com/hiulit/Sassy-Gridlover for the css only grid
-//     background-image: linear-gradient($baseline-grid-color 1px, transparent 1px);
-//     background-position: left top;
-//     background-size: $baseline-line-height $baseline-line-height;
-//     box-shadow: 1px 0px 0px $baseline-grid-color, -1px 0px 0px $baseline-grid-color;
-//   }
+    // hat tip to https://github.com/hiulit/Sassy-Gridlover for the css only grid
+    background-image: linear-gradient($baseline-grid-color 1px, transparent 1px);
+    background-position: left top;
+    background-size: $baseline-line-height $baseline-line-height;
+    box-shadow: 1px 0px 0px $baseline-grid-color, -1px 0px 0px $baseline-grid-color;
+  }
 
-//   & > header:active:after, & > footer:active:after, & > main:active:after {
-//     display: none;
-//   }  
-// }
+  & > header:active:after, & > footer:active:after, & > main:active:after {
+    display: none;
+  }  
+}
