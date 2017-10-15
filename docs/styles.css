@@ -740,9 +740,7 @@ section.how-it-works {
     padding-left: 0;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
-    margin-left: calc(8.33333% - 1.5rem);
-    margin-right: calc(8.33333% - 1.5rem); }
+    justify-content: space-between; }
     @media screen and (min-width: 48rem) {
       section.how-it-works ul.three-steps {
         flex-flow: row wrap; } }
@@ -756,10 +754,17 @@ section.how-it-works {
         margin-left: 0; }
       section.how-it-works ul.three-steps > *:last-child {
         margin-right: 0; } }
+    @media screen and (min-width: 48rem) {
+      section.how-it-works ul.three-steps {
+        margin-left: calc(8.33333% - 1.5rem);
+        margin-right: calc(8.33333% - 1.5rem); } }
     section.how-it-works ul.three-steps li {
       color: #ffffff;
       text-align: center;
       padding-bottom: 0.1px; }
+      section.how-it-works ul.three-steps li > * {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem; }
       section.how-it-works ul.three-steps li h3 {
         text-transform: uppercase; }
     section.how-it-works ul.three-steps li.analyse {
@@ -773,9 +778,7 @@ section.how-it-works {
     padding-left: 0;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
-    margin-left: calc(16.66667% - 1.5rem);
-    margin-right: calc(16.66667% - 1.5rem); }
+    justify-content: space-between; }
     @media screen and (min-width: 48rem) {
       section.how-it-works ul.summary {
         flex-flow: row wrap; } }
@@ -789,6 +792,10 @@ section.how-it-works {
         margin-left: 0; }
       section.how-it-works ul.summary > *:last-child {
         margin-right: 0; } }
+    @media screen and (min-width: 48rem) {
+      section.how-it-works ul.summary {
+        margin-left: calc(16.66667% - 1.5rem);
+        margin-right: calc(16.66667% - 1.5rem); } }
     section.how-it-works ul.summary li {
       flex: 0 1 calc(50% - 1.5rem); }
     section.how-it-works ul.summary li:nth-child(odd) {
