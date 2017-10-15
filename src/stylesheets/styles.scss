@@ -143,6 +143,12 @@ section.stats {
   h3 {
     color: $color-brand-darkblue-30;
     @include fitToBaselineGrid(0);
+
+    margin-bottom: baselineGridUnits(2);
+
+    @include small-screen-up {      
+      margin-bottom: baselineGridUnits(1)
+    }      
   }
 
   ul {
@@ -153,14 +159,16 @@ section.stats {
       text-align: center;
     }
 
-    li:first-child {
-      @include grid-offset(2,0);
-    }
+    @include small-screen-up {      
+      
+      li:first-child {
+        @include grid-offset(2,0);
+      }
 
-    li:last-child {
-      @include grid-offset(0,2);
+      li:last-child {
+        @include grid-offset(0,2);
+      }
     }
-
   }
 
   .percentage {
