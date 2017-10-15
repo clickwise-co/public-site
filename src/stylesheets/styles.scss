@@ -19,6 +19,9 @@ footer .contents {
 }
 
 header {
+  margin-top: baselineGridUnits(1);
+  margin-bottom: baselineGridUnits(1);
+  
   .contents {
     @include grid;
   }
@@ -58,6 +61,10 @@ footer {
 
   nav a {
     color: $color-white;
+  }
+
+  .registration-details {
+    @include fitToBaselineGrid(-1);    
   }
 }
 
@@ -107,10 +114,13 @@ section.stats {
   h2 {
     color: $color-brand-darkorange;
     text-transform: uppercase;
+    @include fitToBaselineGrid(1);
+    margin-bottom: 0;
   }
 
   h3 {
     color: $color-brand-darkblue-30;
+    @include fitToBaselineGrid(0);
   }
 
   ul {
@@ -133,6 +143,8 @@ section.stats {
 
   .percentage {
     color: $color-brand-green;
+    @include fitToBaselineGrid(3);
+    margin-bottom: 0;
   }
 
   .description {
@@ -141,9 +153,36 @@ section.stats {
 
 }
 
+section.stats1 {
+
+  li.action-rates .percentage::after{
+    content: url(images/stats-arrow-up.svg);
+    margin-left: 0.5rem;
+  }
+
+  li.cpc .percentage::after{
+    content: url(images/stats-arrow-down.svg);
+    margin-left: 0.5rem;
+  }
+}
+
+ section.stats2 {
+
+  li.volume .percentage::after{
+    content: url(images/stats-arrow-up.svg);
+    margin-left: 0.5rem;
+  }
+
+  li.wasted-spend .percentage::after{
+    content: url(images/stats-arrow-down.svg);
+    margin-left: 0.5rem;
+  }
+}
+
+
 section.how-it-works {
   padding-top: baselineGridUnits(2);
-  padding-bottom: baselineGridUnits(2);
+  padding-bottom: baselineGridUnits(1);
 
   ul.three-steps {
     @include remove-bullets;
@@ -204,7 +243,7 @@ section.how-it-works {
 
 section.service-details {
   padding-top: baselineGridUnits(2);
-  padding-bottom: baselineGridUnits(2);
+  padding-bottom: baselineGridUnits(1);
 
   ul {
     @include remove-bullets;

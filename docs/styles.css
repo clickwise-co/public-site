@@ -509,49 +509,50 @@ footer .contents {
   footer .contents > h3 {
     text-align: center; }
 
-header .contents {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between; }
-  @media screen and (min-width: 48rem) {
-    header .contents {
-      flex-flow: row wrap; } }
-  header .contents > * {
-    flex: 4 1 0; }
-  @media screen and (min-width: 48rem) {
+header {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
+  header .contents {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between; }
+    @media screen and (min-width: 48rem) {
+      header .contents {
+        flex-flow: row wrap; } }
     header .contents > * {
-      margin-left: 0.75rem;
-      margin-right: 0.75rem; }
-    header .contents > *:first-child {
-      margin-left: 0; }
-    header .contents > *:last-child {
-      margin-right: 0; } }
-
-header nav ul {
-  list-style: none;
-  padding-left: 0;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  margin-top: 1.5rem; }
-  @media screen and (min-width: 48rem) {
-    header nav ul {
-      flex-flow: row wrap; } }
-  header nav ul > * {
-    flex: 4 1 0; }
-  @media screen and (min-width: 48rem) {
+      flex: 4 1 0; }
+    @media screen and (min-width: 48rem) {
+      header .contents > * {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem; }
+      header .contents > *:first-child {
+        margin-left: 0; }
+      header .contents > *:last-child {
+        margin-right: 0; } }
+  header nav ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin-top: 1.5rem; }
+    @media screen and (min-width: 48rem) {
+      header nav ul {
+        flex-flow: row wrap; } }
     header nav ul > * {
-      margin-left: 0.75rem;
-      margin-right: 0.75rem; }
-    header nav ul > *:first-child {
-      margin-left: 0; }
-    header nav ul > *:last-child {
-      margin-right: 0; } }
-  header nav ul li {
-    text-align: right; }
-
-header nav a {
-  color: #189EA2; }
+      flex: 4 1 0; }
+    @media screen and (min-width: 48rem) {
+      header nav ul > * {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem; }
+      header nav ul > *:first-child {
+        margin-left: 0; }
+      header nav ul > *:last-child {
+        margin-right: 0; } }
+    header nav ul li {
+      text-align: right; }
+  header nav a {
+    color: #189EA2; }
 
 footer {
   background-color: #2E2C3E;
@@ -598,6 +599,10 @@ footer {
       text-align: right; }
   footer nav a {
     color: #ffffff; }
+  footer .registration-details {
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+    margin: 0 0 1.5rem 0; }
 
 section.hero {
   background-image: url(images/hero-background-medium.jpg);
@@ -646,9 +651,16 @@ section.stats {
   padding-bottom: 1.5rem; }
   section.stats h2 {
     color: #DB6C4C;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-size: 1.3125rem;
+    line-height: 2;
+    margin: 0 0 1.5rem 0;
+    margin-bottom: 0; }
   section.stats h3 {
-    color: #787A88; }
+    color: #787A88;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 0 0 1.5rem 0; }
   section.stats ul {
     list-style: none;
     padding-left: 0;
@@ -675,13 +687,33 @@ section.stats {
     section.stats ul li:last-child {
       margin-right: calc(16.66667% - 1.5rem); }
   section.stats .percentage {
-    color: #189EA2; }
+    color: #189EA2;
+    font-size: 2.375rem;
+    line-height: 3rem;
+    margin: 0 0 1.5rem 0;
+    margin-bottom: 0; }
   section.stats .description {
     color: #787A88; }
 
+section.stats1 li.action-rates .percentage::after {
+  content: url(images/stats-arrow-up.svg);
+  margin-left: 0.5rem; }
+
+section.stats1 li.cpc .percentage::after {
+  content: url(images/stats-arrow-down.svg);
+  margin-left: 0.5rem; }
+
+section.stats2 li.volume .percentage::after {
+  content: url(images/stats-arrow-up.svg);
+  margin-left: 0.5rem; }
+
+section.stats2 li.wasted-spend .percentage::after {
+  content: url(images/stats-arrow-down.svg);
+  margin-left: 0.5rem; }
+
 section.how-it-works {
   padding-top: 3rem;
-  padding-bottom: 3rem; }
+  padding-bottom: 1.5rem; }
   section.how-it-works ul.three-steps {
     list-style: none;
     padding-left: 0;
@@ -749,7 +781,7 @@ section.how-it-works {
 
 section.service-details {
   padding-top: 3rem;
-  padding-bottom: 3rem; }
+  padding-bottom: 1.5rem; }
   section.service-details ul {
     list-style: none;
     padding-left: 0;
