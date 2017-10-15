@@ -85,8 +85,11 @@ section.hero {
   h1 {
     padding-top: baselineGridUnits(9);
     color: $color-white;
-    width: grid-width(6);
-    @include grid-offset(1, 0);    
+
+    @include small-screen-up {
+      width: grid-width(6);
+      @include grid-offset(1, 0);
+    }
   }
 }
 
