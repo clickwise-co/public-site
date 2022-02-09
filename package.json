@@ -20,7 +20,7 @@
   "homepage": "https://github.com/clickwise-co/public-site#readme",
   "devDependencies": {
     "browser-sync": "^2.18.13",
-    "node-sass": "^4.5.3",
+    "node-sass": "^7.0.0",
     "normalize-scss": "^7.0.0"
   }
 }
